@@ -33,17 +33,23 @@ points:
         ring:
           key.splay: -5
           key.origin: [-12,-10]
+          key.shift: [0,1]
           key.stagger: 5
         middle:
           key.splay: -3
+          key.origin: [0, -22]
           key.stagger: 6
+          key.shift: [0,1]
         pointer:
           key.splay: -8
           key.stagger: -5
           key.origin: [0, -10]
+          key.shift: [0,1]
         pointer2:
           key.splay: -3
           key.stagger: -4
+          key.shift: [0,1]
+          key.origin: [0, -20]
       rows:
         bottom:
         middle:
