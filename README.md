@@ -10,4 +10,4 @@ Sublinks: \
 [Ergogen Auto Layout](https://pashutk.com/ergopad/) \
 [Ergogen Unofficial Website](https://ergogen.cache.works/) \
 [Ergogen Docs](https://docs.ergogen.xyz/) \
-[QMK Firmware](https://qmk.fm/) \
+[QMK Firmware](https://qmk.fm/)
