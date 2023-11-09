@@ -77,14 +77,23 @@ outlines:
     operation: stack
     points:
     - ref: matrix_pinky1_top
-      shift: [-paddingx, paddingy]
+      shift: [-15, paddingy+20]
+    - ref: matrix_pinky1_top
+      shift: [paddingx, paddingy+20]
     - ref: matrix_middle_top
+      shift: [0, 35]
     - ref: matrix_pointer2_top
-    - ref: matrix_pointer2_bottom
-    - ref: thumbfan_near_thumb
+      shift: [20, 35]
     - ref: thumbfan_far_thumb
+      shift: [15, 15]
+    - ref: thumbfan_far_thumb
+      shift: [15, -14]
+    - ref: matrix_middle_bottom
+      shift: [0, -30] 
     - ref: matrix_pinky1_bottom
+      shift: [-15, -20]
   panel:
   - name: pcb_outline
   - operation: subtract
     name: keyoutline
+
