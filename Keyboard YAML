@@ -1,0 +1,84 @@
+metadata:
+  engine: 4.0
+  version: 1.0
+  author: John Rowberry
+  contact: johnrowberries@gmail.com
+units:
+  default_spread: 'cx'
+  default_splay: 0
+  default_width: 'cy-1'
+  default_padding: 'cx'
+  default_autobind: 10
+  xspace: cx
+  yspace: cy
+  paddingx: xspace + 1
+  paddingy: yspace + 1
+  
+points:
+  zones:
+    matrix:
+      key:
+        padding: default_padding
+        spread: default_spread
+      anchor:
+        rotate: 10
+      columns:
+        pinky1:
+          key.shift: [0,1]
+        pinky2:
+          key.splay: -10
+          key.origin: [-10,-15]
+          key.shift: [0,1]
+          key.stagger: 5
+        ring:
+          key.splay: -5
+          key.origin: [-12,-10]
+          key.stagger: 5
+        middle:
+          key.splay: -3
+          key.stagger: 6
+        pointer:
+          key.splay: -8
+          key.stagger: -5
+          key.origin: [0, -10]
+        pointer2:
+          key.splay: -3
+          key.stagger: -4
+      rows:
+        bottom:
+        middle:
+        top:
+        number:
+    thumbfan:
+      anchor:
+        ref: matrix_pointer2_bottom
+        shift: [0,-20]
+      columns:
+        near:
+          key.splay: -15
+        home:
+        far:
+      rows:
+        thumb:
+  rotate: 10
+outlines:
+  keyoutline:
+  - what: rectangle
+    where: true
+    size: [xspace,yspace]
+  pcb_outline:
+  - what: polygon
+    operation: stack
+    points:
+    - ref: matrix_pinky1_top
+      shift: [-paddingx, paddingy]
+    - ref: matrix_middle_top
+    - ref: matrix_pointer2_top
+    - ref: matrix_pointer2_bottom
+    - ref: thumbfan_near_thumb
+    - ref: thumbfan_far_thumb
+    - ref: matrix_pinky1_bottom
+  panel:
+  - name: pcb_outline
+  - operation: subtract
+    name: keyoutline
