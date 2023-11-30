@@ -21,29 +21,29 @@ points:
         padding: default_padding
         spread: default_spread
       anchor:
-        rotate: 10
+        rotate: 0
       columns:
         pinky1:
           key.shift: [0,1]
-        pinky2:
-          key.splay: -10
-          key.origin: [-10,-15]
+        pink2:
+          key.splay: -1
           key.shift: [0,1]
-          key.stagger: 5
+          key.stagger: 1
+          key.origin: [0,-120]
         ring:
           key.splay: -5
-          key.origin: [-12,-10]
+          key.origin: [-12,-30]
           key.shift: [0,1]
           key.stagger: 5
         middle:
           key.splay: -3
-          key.origin: [0, -22]
+          key.origin: [0, -45]
           key.stagger: 6
           key.shift: [0,1]
         pointer:
-          key.splay: -8
+          key.splay: -3
           key.stagger: -5
-          key.origin: [0, -10]
+          key.origin: [0, -40]
           key.shift: [0,1]
         pointer2:
           key.splay: -3
@@ -77,23 +77,34 @@ outlines:
     operation: stack
     points:
     - ref: matrix_pinky1_top
-      shift: [-15, paddingy+20]
+      shift: [-15, paddingy+15]
     - ref: matrix_pinky1_top
-      shift: [paddingx, paddingy+20]
+      shift: [35, paddingy+20]
+    - ref: matrix_ring_top
+      shift: [0, 35]
     - ref: matrix_middle_top
+      shift: [-5, 32]
+    - ref: matrix_middle_top
+      shift: [5, 32]
+    - ref: matrix_pointer_top
       shift: [0, 35]
     - ref: matrix_pointer2_top
-      shift: [20, 35]
+      shift: [40, 32]
     - ref: thumbfan_far_thumb
       shift: [15, 15]
     - ref: thumbfan_far_thumb
       shift: [15, -14]
+    - ref: matrix_pointer_bottom
+      shift: [0,-32]
     - ref: matrix_middle_bottom
-      shift: [0, -30] 
+      shift: [0, -25] 
+    - ref: matrix_ring_bottom
+      shift: [0, -19]
+    - ref: matrix_pink2_bottom
+      shift: [0, -16]
     - ref: matrix_pinky1_bottom
-      shift: [-15, -20]
+      shift: [-15, -15]
   panel:
   - name: pcb_outline
   - operation: subtract
     name: keyoutline
-
