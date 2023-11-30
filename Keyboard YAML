@@ -31,7 +31,7 @@ points:
           key.stagger: 1
           key.origin: [0,-120]
         ring:
-          key.splay: -5
+          key.splay: -3
           key.origin: [-12,-30]
           key.shift: [0,1]
           key.stagger: 5
@@ -108,3 +108,74 @@ outlines:
   - name: pcb_outline
   - operation: subtract
     name: keyoutline
+pcbs:
+  boardPcb:
+    outlines:
+      main:
+        outline: board
+    footprints:
+      choc_hotswap:
+        what: choc
+        where: true
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+          from: "{{column_net}}"
+          to: "{{colrow}}"
+      diode:
+        what: diode
+        where: true
+        params:
+          from: "{{colrow}}"
+          to: "{{row_net}}"
+        adjust:
+          shift: [cy/2 -.7, -3]
+          rotate: 90
+      microcontroller:
+        what: promicro
+        params:
+          orientation: "down"
+        where:
+          ref: matrix_inner_top
+          shift: [px, 0]
+          rotate: -90
+      audio:
+        what: trrs
+        params:
+          A: "audioA"
+          B: "audioB"
+          C: "audioC"
+          D: "audioD"
+          reverse: true
+        where:
+          ref: matrix_inner_home
+          shift: [px*1.5, 0]
+          rotate: -90
+      rgbB:
+        what: rgb
+        params:
+          side: "B"
+          din: "din"
+          dout: "dout"
+        where: true
+        adjust:
+          shift: [0, ledy]
+      rgbF:
+        what: rgb
+        params:
+          side: "F"
+          din: "din"
+          dout: "dout"
+        where: true
+        adjust:
+          shift: [0, ledy]
+
+
+cases:
+  baseCase:
+  - what: outline
+    name: board
+    extrude: 1
+
+     
