@@ -72,6 +72,10 @@ outlines:
   - what: rectangle
     where: true
     size: [xspace,yspace]
+  faceplate_keys:
+  - what: rectangle
+    where: true
+    size: [14,14]
   pcb_outline:
   - what: polygon
     operation: stack
@@ -108,11 +112,16 @@ outlines:
   - name: pcb_outline
   - operation: subtract
     name: keyoutline
+  faceplate_panel:
+  - name: pcb_outline
+  - operation: subtract
+    name: faceplate_keys
+
 pcbs:
   boardPcb:
     outlines:
       main:
-        outline: board
+        outline: pcb_outline
     footprints:
       choc_hotswap:
         what: choc
@@ -137,8 +146,8 @@ pcbs:
         params:
           orientation: "down"
         where:
-          ref: matrix_inner_top
-          shift: [px, 0]
+          ref: matrix_pointer_bottom
+          shift: [0, 0]
           rotate: -90
       audio:
         what: trrs
@@ -149,8 +158,8 @@ pcbs:
           D: "audioD"
           reverse: true
         where:
-          ref: matrix_inner_home
-          shift: [px*1.5, 0]
+          ref: matrix_pointer_bottom
+          shift: [1.5, 0]
           rotate: -90
       rgbB:
         what: rgb
@@ -160,7 +169,7 @@ pcbs:
           dout: "dout"
         where: true
         adjust:
-          shift: [0, ledy]
+          shift: [0, 0]
       rgbF:
         what: rgb
         params:
@@ -169,13 +178,10 @@ pcbs:
           dout: "dout"
         where: true
         adjust:
-          shift: [0, ledy]
-
+          shift: [0, 0]
 
 cases:
-  baseCase:
+  faceplate:
   - what: outline
-    name: board
-    extrude: 1
-
-     
+    name: faceplate_panel
+    extrude: 1.5
