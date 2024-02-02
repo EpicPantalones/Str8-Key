@@ -28,7 +28,7 @@ points:
         pink2:
           key.splay: -1
           key.shift: [0,1]
-          key.stagger: 1
+          key.stagger: 0
           key.origin: [0,-120]
         ring:
           key.splay: -3
@@ -58,7 +58,7 @@ points:
     thumbfan:
       anchor:
         ref: matrix_pointer2_bottom
-        shift: [0,-20]
+        shift: [0,-21]
       columns:
         near:
           key.splay: -15
@@ -66,6 +66,17 @@ points:
         far:
       rows:
         thumb:
+    thumbfan2:
+      anchor:
+        ref: matrix_pointer2_bottom
+        shift: [23,-8]
+      columns:
+        near2:
+          key.splay: -15
+        home2:
+      rows:
+        thumb2:
+
   rotate: 10
 outlines:
   keyoutline:
@@ -79,33 +90,24 @@ outlines:
   pcb_outline:
   - what: polygon
     operation: stack
+    fillet: 5
     points:
     - ref: matrix_pinky1_top
       shift: [-15, paddingy+15]
-    - ref: matrix_pinky1_top
-      shift: [35, paddingy+20]
-    - ref: matrix_ring_top
-      shift: [0, 35]
     - ref: matrix_middle_top
-      shift: [-5, 32]
-    - ref: matrix_middle_top
-      shift: [5, 32]
-    - ref: matrix_pointer_top
-      shift: [0, 35]
+      shift: [-3, 34]
     - ref: matrix_pointer2_top
-      shift: [40, 32]
+      shift: [33, 35]
+    - ref: matrix_pointer2_top
+      shift: [33, -34]
     - ref: thumbfan_far_thumb
-      shift: [15, 15]
+      shift: [15, 32]
     - ref: thumbfan_far_thumb
       shift: [15, -14]
     - ref: matrix_pointer_bottom
-      shift: [0,-32]
+      shift: [0,-33]
     - ref: matrix_middle_bottom
-      shift: [0, -25] 
-    - ref: matrix_ring_bottom
-      shift: [0, -19]
-    - ref: matrix_pink2_bottom
-      shift: [0, -16]
+      shift: [25, -22] 
     - ref: matrix_pinky1_bottom
       shift: [-15, -15]
   panel:
