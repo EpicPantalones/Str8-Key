@@ -87,27 +87,31 @@ outlines:
     fillet: 5
     points:
     - ref: matrix_pinky1_top
-      shift: [-15, paddingy+15]
+      shift: [-15, 34]
     - ref: matrix_ring_top
-      shift: [0,35]
+      shift: [0,34]
     - ref: matrix_middle_top
-      shift: [0, 35]
+      shift: [0, 34]
     - ref: matrix_pointer_top
-      shift: [0,35]
+      shift: [0,34]
     - ref: matrix_pointer2_top
       shift: [37, 35]
     - ref: matrix_pointer2_top
       shift: [37, -35]
     - ref: thumbfan_far_thumb
-      shift: [15, 32]
+      shift: [14, 32]
     - ref: thumbfan_far_thumb
-      shift: [15, -14]
+      shift: [14, -14]
     - ref: matrix_pointer_bottom
-      shift: [0,-33]
+      shift: [1,-30]
     - ref: matrix_middle_bottom
-      shift: [25, -22] 
+      shift: [28, -15]
+    - ref: matrix_middle_bottom
+      shift: [0, -14]
+    - ref: matrix_ring_bottom
+      shift: [0, -14] 
     - ref: matrix_pinky1_bottom
-      shift: [-15, -15]
+      shift: [-15, -14]
   panel:
   - name: pcb_outline
   - operation: subtract
