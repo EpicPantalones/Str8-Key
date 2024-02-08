@@ -97,9 +97,9 @@ outlines:
     - ref: matrix_middle_top
       shift: [-3, 34]
     - ref: matrix_pointer2_top
-      shift: [33, 35]
+      shift: [37, 35]
     - ref: matrix_pointer2_top
-      shift: [33, -34]
+      shift: [37, -35]
     - ref: thumbfan_far_thumb
       shift: [15, 32]
     - ref: thumbfan_far_thumb
