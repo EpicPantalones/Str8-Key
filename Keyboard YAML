@@ -88,8 +88,12 @@ outlines:
     points:
     - ref: matrix_pinky1_top
       shift: [-15, paddingy+15]
+    - ref: matrix_ring_top
+      shift: [0,35]
     - ref: matrix_middle_top
-      shift: [-3, 34]
+      shift: [0, 35]
+    - ref: matrix_pointer_top
+      shift: [0,35]
     - ref: matrix_pointer2_top
       shift: [37, 35]
     - ref: matrix_pointer2_top
