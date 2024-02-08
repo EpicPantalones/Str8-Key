@@ -143,15 +143,14 @@ pcbs:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [cy/2 -.7, -3]
-          rotate: 90
+          shift: [0,-5]
       microcontroller:
         what: promicro
         params:
           orientation: "down"
         where:
-          ref: matrix_pointer_bottom
-          shift: [0, 0]
+          ref: matrix_pointer2_top
+          shift: [22.5, 10]
           rotate: -90
       audio:
         what: trrs
