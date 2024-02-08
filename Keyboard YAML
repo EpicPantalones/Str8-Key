@@ -1,55 +1,46 @@
 metadata:
   engine: 4.0
-  version: 1.0
+  version: 1.2
   author: John Rowberry
   contact: johnrowberries@gmail.com
 units:
   default_spread: 'cx'
   default_splay: 0
-  default_width: 'cy-1'
+  default_width: 'cy'
   default_padding: 'cx'
   default_autobind: 10
   xspace: cx
   yspace: cy
-  paddingx: xspace + 1
-  paddingy: yspace + 1
+  paddingy: yspace
   
 points:
   zones:
     matrix:
       key:
         padding: default_padding
-        spread: default_spread
+        spread: default_spread + 2
       anchor:
         rotate: 0
       columns:
         pinky1:
           key.shift: [0,1]
         pink2:
-          key.splay: -1
           key.shift: [0,1]
-          key.stagger: 0
-          key.origin: [0,-120]
         ring:
           key.splay: -3
-          key.origin: [-12,-30]
+          key.origin: [0,-30]
           key.shift: [0,1]
-          key.stagger: 5
         middle:
           key.splay: -3
-          key.origin: [0, -45]
-          key.stagger: 6
-          key.shift: [0,1]
+          key.origin: [0, -30]
+          key.shift: [0, 1]
         pointer:
-          key.splay: -3
-          key.stagger: -5
-          key.origin: [0, -40]
+          key.splay: -3.5
+          key.origin: [0, -20]
           key.shift: [0,1]
         pointer2:
-          key.splay: -3
-          key.stagger: -4
+          key.splay: 
           key.shift: [0,1]
-          key.origin: [0, -20]
       rows:
         bottom:
         middle:
@@ -62,8 +53,11 @@ points:
       columns:
         near:
           key.splay: -15
+          key.shift: [-1,0]
         home:
+          key.shift: [0,0]
         far:
+          key.shift: [1,0]
       rows:
         thumb:
     thumbfan2:
@@ -74,9 +68,9 @@ points:
         near2:
           key.splay: -15
         home2:
+          key.shift: [1,0]
       rows:
         thumb2:
-
   rotate: 10
 outlines:
   keyoutline:
