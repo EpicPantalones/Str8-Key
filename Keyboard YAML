@@ -20,6 +20,7 @@ points:
         padding: default_padding
         spread: default_spread + 2
       anchor:
+        shift: [100,-200]
         rotate: 0
       columns:
         pinky1:
