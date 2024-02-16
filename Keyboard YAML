@@ -161,8 +161,8 @@ pcbs:
           D: "audioD"
           reverse: true
         where:
-          ref: matrix_pointer_bottom
-          shift: [1.5, 0]
+          ref: matrix_pointer2_top
+          shift: [31, -20]
           rotate: -90
       rgbB:
         what: rgb
