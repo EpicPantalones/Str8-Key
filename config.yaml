@@ -25,28 +25,38 @@ points:
       columns:
         pinky1:
           key.shift: [0,1]
+          key.column_net: P2
         pink2:
           key.shift: [0,1]
+          key.column_net: P3
         ring:
           key.splay: -3
           key.origin: [0,-30]
           key.shift: [0,1]
+          key.column_net: P4
         middle:
           key.splay: -3
           key.origin: [0, -30]
           key.shift: [0, 1]
+          key.column_net: P5
         pointer:
           key.splay: -3.5
           key.origin: [0, -20]
           key.shift: [0,1]
+          key.column_net: P6
         pointer2:
           key.splay: 
           key.shift: [0,1]
+          key.column_net: P15
       rows:
         bottom:
+          row_net: P18
         middle:
+          row_net: P19
         top:
+          row_net: P20
         number:
+          row_net: P21
     thumbfan:
       anchor:
         ref: matrix_pointer2_bottom
@@ -129,37 +139,39 @@ pcbs:
         outline: pcb_outline
     footprints:
       choc_hotswap:
-        what: choc
+        what: virginia2244/choc
         where: true
         params:
+          traces: true
           keycaps: true
           reverse: true
           hotswap: true
           from: "{{column_net}}"
           to: "{{colrow}}"
       diode:
-        what: diode
+        what: virginia2244/diode
         where: true
         params:
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
-          shift: [0,-5]
+          shift: [9.5,-4]
+          rotate: 90
       microcontroller:
-        what: promicro
+        what: virginia2244/promicro
         params:
-          orientation: "down"
+          reversable: true
+          traces: true
         where:
           ref: matrix_pointer2_top
           shift: [22.5, 10]
-          rotate: -90
       audio:
         what: trrs
         params:
-          A: "audioA"
-          B: "audioB"
-          C: "audioC"
-          D: "audioD"
+          A: "GND"
+          B: "P9"
+          C: "P10"
+          D: "VCC"
           reverse: true
         where:
           ref: matrix_pointer2_top
@@ -169,20 +181,20 @@ pcbs:
         what: rgb
         params:
           side: "B"
-          din: "din"
-          dout: "dout"
+          din: "P8"
+          dout: "P7"
         where: true
         adjust:
-          shift: [0, 0]
+          shift: [0, -5.5]
       rgbF:
         what: rgb
         params:
           side: "F"
-          din: "din"
-          dout: "dout"
+          din: "P8"
+          dout: "P7"
         where: true
         adjust:
-          shift: [0, 0]
+          shift: [0, -5.5]
 
 cases:
   faceplate:
