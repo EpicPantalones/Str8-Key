@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.9906,
-          "height": 1.778,
-          "width": 1.778
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -335,6 +335,10 @@
       },
       {
         "netclass": "Default",
+        "pattern": "P14"
+      },
+      {
+        "netclass": "Default",
         "pattern": "near_thumb"
       },
       {
@@ -343,11 +347,11 @@
       },
       {
         "netclass": "Default",
-        "pattern": "far_thumb"
+        "pattern": "P16"
       },
       {
         "netclass": "Default",
-        "pattern": "near2_thumb2"
+        "pattern": "far_thumb"
       },
       {
         "netclass": "Default",
@@ -355,19 +359,23 @@
       },
       {
         "netclass": "Default",
+        "pattern": "far2_thumb2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "P21"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "P20"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "P19"
+      },
+      {
+        "netclass": "Default",
         "pattern": "P18"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "P15"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "P14"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "P16"
       },
       {
         "netclass": "Default",
@@ -387,15 +395,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "P21"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "P20"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "P19"
+        "pattern": "P15"
       },
       {
         "netclass": "Default",
@@ -448,14 +448,6 @@
       {
         "netclass": "Default",
         "pattern": "_1_20"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "din"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "dout"
       }
     ]
   },

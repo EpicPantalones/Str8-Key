@@ -47,16 +47,16 @@ points:
         pointer2:
           key.splay: 
           key.shift: [0,1]
-          key.column_net: P15
+          key.column_net: P7
       rows:
         bottom:
-          row_net: P18
-        middle:
-          row_net: P19
-        top:
-          row_net: P20
-        number:
           row_net: P21
+        middle:
+          row_net: P20
+        top:
+          row_net: P19
+        number:
+          row_net: P18
     thumbfan:
       anchor:
         ref: matrix_pointer2_bottom
@@ -65,23 +65,30 @@ points:
         near:
           key.splay: -15
           key.shift: [-1,0]
+          key.column_net: P14
         home:
           key.shift: [0,0]
+          key.column_net: P14
         far:
           key.shift: [1,0]
+          key.column_net: P16
       rows:
         thumb:
+          row_net: P20
     thumbfan2:
       anchor:
         ref: matrix_pointer2_bottom
         shift: [23,-8]
       columns:
-        near2:
-          key.splay: -15
         home2:
+          key.splay: -15
+          key.column_net: P14
+        far2:
           key.shift: [1,0]
+          key.column_net: P16
       rows:
         thumb2:
+          row_net: P19
   rotate: 10
 outlines:
   keyoutline:
@@ -164,7 +171,7 @@ pcbs:
           traces: true
         where:
           ref: matrix_pointer2_top
-          shift: [22.5, 10]
+          shift: [23, 10]
       audio:
         what: trrs
         params:
@@ -182,7 +189,7 @@ pcbs:
         params:
           side: "B"
           din: "P8"
-          dout: "P7"
+          dout: "P15"
         where: true
         adjust:
           shift: [0, -5.5]
@@ -191,7 +198,7 @@ pcbs:
         params:
           side: "F"
           din: "P8"
-          dout: "P7"
+          dout: "P15"
         where: true
         adjust:
           shift: [0, -5.5]
