@@ -185,23 +185,15 @@ pcbs:
           shift: [31, -20]
           rotate: -90
       rgbB:
-        what: rgb
+        what: epicpantalones/WS2812-2020
         params:
-          side: "B"
           din: "P8"
+          vcc: "VCC"
           dout: "P15"
+          gnd: "GND"
         where: true
         adjust:
-          shift: [0, -5.5]
-      rgbF:
-        what: rgb
-        params:
-          side: "F"
-          din: "P8"
-          dout: "P15"
-        where: true
-        adjust:
-          shift: [0, -5.5]
+          shift: [0, -4.7]
 
 cases:
   faceplate:
