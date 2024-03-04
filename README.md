@@ -8,7 +8,7 @@
 * footprints/ are all .js files that describe custom footprints that can be used in Ergogen code and in KiCad.
 
 ## Links we used:
-* The [Ergogen guide by FlatFootFox](https://flatfootfox.com/ergogen-introduction/) is a great guide for how to do all this. This was our teacher (along with Carter from BYU's IEEE Club)
+* The [Ergogen guide by FlatFootFox](https://flatfootfox.com/ergogen-introduction/) is a great guide for how to do all this. This was our teacher (along with BYU's IEEE Club)
 * The [Ergogen Unofficial Website](https://ergogen.cache.works/) is very similar to the [Ergogen Official Website](https://ergogen.xyz/) except that it is a little better at rendering something things in real time. Eventually we did switch to running Ergogen locally on node (described in Flatfoot's guide? I think) which is very helpful.
 * [QMK Firmware](https://qmk.fm/) is used to program the board [This is a work in progress - more later]
 * [Carter's GitHub](https://github.com/Virginia2244/BYU-IEEE-Keyboard-Project) that we used as a template for the YAML and which saved our bacon more than once.
