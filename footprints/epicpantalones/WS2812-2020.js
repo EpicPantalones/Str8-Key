@@ -1,7 +1,10 @@
-/* a really bad version of the WS2812-2020 LED
+/* a mediocre version of the WS2812-2020 LED
 *  I mean, it works fine honestly.
 *  it does force it to exist on both sides though becuase that's how I used it.
 *  if you don't want that to happen make sure to delete the pads on the rear (the four lines with B.)
+*  also notice that the back pads are flipped because, well, the board is mirrored when you flip it over.
+*  the front and back are rotated 180 degrees from each other, though the footprint makes no mention of this;
+*  so I would be careful if you are using this design with a pick-n-place. You'd likely want to buff this code.
 */
 module.exports = {
     params: {
