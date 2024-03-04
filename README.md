@@ -1,4 +1,6 @@
-# mega-keyboard
+# The Mega-keyboard
+
+![the board layout](photos/board_layout_full.png)
 
 ## whats in the Github:
 * WireIt/ is a plugin for Kicad that I use to create new net names when I have to chaing the LEDs together.
