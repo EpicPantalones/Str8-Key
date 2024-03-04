@@ -1,6 +1,8 @@
 # mega-keyboard
 all da keyboard stuff
 
+WireIt is a plugin for Kicad that I use to create new net names when I have to chaing the LEDs together.
+
 here's the link to Carter's GitHub: \
 https://github.com/Virginia2244/BYU-IEEE-Keyboard-Project
 
