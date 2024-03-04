@@ -1,5 +1,7 @@
 # mega-keyboard
-This is for keyboard stuff
+all da keyboard stuff
+
+WireIt is a plugin for Kicad that I use to create new net names when I have to chaing the LEDs together.
 
 here's the link to Carter's GitHub: \
 https://github.com/Virginia2244/BYU-IEEE-Keyboard-Project
@@ -10,7 +12,7 @@ Other Links:
 [LED i used as a code basis](https://github.com/infused-kim/kb_ergogen_fp/blob/main/smd_0805.js) \
 [choc switch datasheet (several places available for this)](https://cdn-shop.adafruit.com/product-files/5113/CHOC+keyswitch_Kailh-CPG135001D01_C400229.pdf) \
 [place to get LEDs](https://www.adafruit.com/product/4684) \
-[choc caps](https://a.co/d/dT4MgD5) \
+[choc caps](https://a.co/d/dT4MgD5)
 
 Sublinks: \
 [Ergogen guide by FlatFootFox](https://flatfootfox.com/ergogen-introduction/) \
