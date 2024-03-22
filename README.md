@@ -1,4 +1,4 @@
-# The Mega-keyboard
+# The Str8-Key Keyboard
 
 ![the board layout](photos/board_layout_full.png)
 
