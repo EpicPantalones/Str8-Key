@@ -1,0 +1,255 @@
+metadata:
+  engine: 4.0
+  version: 1.2
+  author: John Rowberry
+  contact: johnrowberries@gmail.com
+units:
+  default_spread: 'cx'
+  default_splay: 0
+  default_width: 'cy'
+  default_padding: 'cx'
+  default_autobind: 10
+  xspace: cx
+  yspace: cy
+  paddingy: yspace
+  kx: cx
+  ky: cy - 7
+  px: cx - 7
+  py: ky
+  feet_rad: 3.25
+  feet_offset: 1
+  case_thickness: 1.5
+  case_offset: 0.05
+  case_trrs: 4
+  
+points:
+  zones:
+    matrix:
+      key:
+        padding: default_padding
+        spread: default_spread + 2
+      anchor:
+        shift: [100,-200]
+        rotate: 0
+      columns:
+        pinky1:
+          key.shift: [0,1]
+          key.column_net: P2
+        pink2:
+          key.shift: [0,1]
+          key.column_net: P3
+        ring:
+          key.splay: -3
+          key.origin: [0,-30]
+          key.shift: [0,1]
+          key.column_net: P4
+        middle:
+          key.splay: -3
+          key.origin: [0, -30]
+          key.shift: [0, 1]
+          key.column_net: P5
+        pointer:
+          key.splay: -3.5
+          key.origin: [0, -20]
+          key.shift: [0,1]
+          key.column_net: P6
+        pointer2:
+          key.splay: 
+          key.shift: [0,1]
+          key.column_net: P7
+      rows:
+        bottom:
+          row_net: P21
+        middle:
+          row_net: P20
+        top:
+          row_net: P19
+        number:
+          row_net: P18
+    thumbfan:
+      anchor:
+        ref: matrix_pointer2_bottom
+        shift: [0,-21]
+      columns:
+        near:
+          key.splay: -15
+          key.shift: [-1,0]
+          key.column_net: P14
+        home:
+          key.shift: [0,0]
+          key.column_net: P14
+        far:
+          key.shift: [1,0]
+          key.column_net: P16
+      rows:
+        thumb:
+          row_net: P20
+    thumbfan2:
+      anchor:
+        ref: matrix_pointer2_bottom
+        shift: [23,-8]
+      columns:
+        home2:
+          key.splay: -15
+          key.column_net: P14
+        far2:
+          key.shift: [1,0]
+          key.column_net: P16
+      rows:
+        thumb2:
+          row_net: P19
+  rotate: 10
+outlines:
+  keyoutline:
+  - what: rectangle
+    where: true
+    size: [xspace,yspace]
+  faceplate_keys:
+  - what: rectangle
+    where: true
+    size: [14,14]
+  pcb_outline:
+  - what: polygon
+    operation: stack
+    fillet: 5
+    points:
+    - ref: matrix_pinky1_top
+      shift: [-15, 34]
+    - ref: matrix_ring_top
+      shift: [0,34]
+    - ref: matrix_middle_top
+      shift: [0, 34]
+    - ref: matrix_pointer_top
+      shift: [0,34]
+    - ref: matrix_pointer2_top
+      shift: [37, 35]
+    - ref: matrix_pointer2_top
+      shift: [37, -35]
+    - ref: thumbfan_far_thumb
+      shift: [14, 32]
+    - ref: thumbfan_far_thumb
+      shift: [14, -14]
+    - ref: matrix_pointer_bottom
+      shift: [1,-30]
+    - ref: matrix_middle_bottom
+      shift: [28, -15]
+    - ref: matrix_middle_bottom
+      shift: [0, -14]
+    - ref: matrix_ring_bottom
+      shift: [0, -14] 
+    - ref: matrix_pinky1_bottom
+      shift: [-15, -14]
+  panel:
+  - name: pcb_outline
+  - operation: subtract
+    name: keyoutline
+  faceplate_panel:
+  - name: pcb_outline
+  - operation: subtract
+    name: faceplate_keys
+
+  case_inner:
+  - name: pcb_outline
+    expand: case_offset
+  case_outer:
+  - name: pcb_outline
+    expand: case_offset + case_thickness
+  case_PCB_support:
+  - name: pcb_outline
+    expand: -1
+  case_trrs:
+  - what: polygon
+    operation: stack
+    points:
+    - ref: matrix_pointer2_bottom
+      shift: [px*2, -case_trrs - 3]
+    - ref: matrix_pointer2_bottom
+      shift: [px*4,-case_trrs - 3]
+    - ref: matrix_pointer2_bottom
+      shift: [px*4, case_trrs - 3]
+    - ref: matrix_pointer2_bottom
+      shift: [px*2, case_trrs - 3]
+  case_usbc:
+  - what: polygon
+    operation: stack
+    points:
+    - ref: matrix_pointer2_top
+      shift: [px*2 -2-4.5,5]
+    - ref: matrix_pointer2_top
+      shift: [px*2 -2+4.5, 5]
+    - ref: matrix_pointer2_top
+      shift: [px*2-2+4.5,13]
+    - ref: matrix_pointer2_top
+      shift: [px*2-2-4.5,13]
+  case_edge_full:
+  - name: case_outer
+  - -case_inner
+
+  case_feet_one:
+  - what: circle
+    where:
+    - ref: matrix_pinky1_top
+      shift: [-cx/2 + feet_offset,cy/2 - feet_offset]
+    radius: feet_rad
+  case_feet_two:
+  - what: circle
+    where:
+    - ref: matrix_middle_top
+      shift: [-cx/2 + feet_offset,cy/2 - feet_offset]
+    radius: feet_rad
+  case_feet_three:
+  - what: circle
+    where:
+    - ref: matrix_pointer2_top
+      shift: [cx*3/2 + feet_offset,cy/2 - feet_offset]
+    radius: feet_rad
+  case_feet_four:
+  - what: circle
+    where:
+    - ref: thumbfan_far_thumb
+      shift: [cx/2 - feet_offset,cx/2 - feet_offset]
+    radius: feet_rad
+  case_feet_five:
+  - what: circle
+    where:
+    - ref: thumbfan_far_thumb
+      shift: [cx/2 - feet_offset,-cx/2 + feet_offset]
+    radius: feet_rad
+  case_feet_six:
+  - what: circle
+    where:
+    - ref: matrix_pinky1_bottom
+      shift: [-cx/2 + feet_offset,-cx/2 + feet_offset]
+    radius: feet_rad
+  case_outer_feet:
+  - name: case_feet_one
+  - +case_feet_two
+  - +case_feet_three
+  - +case_feet_four
+  - +case_feet_five
+  - +case_feet_six
+
+
+
+cases:
+  faceplate:
+  - what: outline
+    name: faceplate_panel
+    extrude: 1.5
+  case:
+  - what: outline
+    name: case_outer
+    extrude: 2
+  - what: outline
+    name: case_edge_full
+    extrude: 7.8
+  - what: outline
+    name: case_PCB_support
+    extrude: 4
+  - what: outline
+    name: case_edge_full
+    extrude: 5.7
+  - what: outline
+    name: case_outer_feet
+    extrude: .5
+    operation: subtract
