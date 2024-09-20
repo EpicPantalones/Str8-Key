@@ -6,6 +6,8 @@
 
 Welcome to Str8-Key, a custom mechanical keyboard in both form and function. Co-designed by Ethan Sorensen and John Rowberry, this ortho-linear, staggered, split keyboard is powered by dual Arduino Pro-Micro microcontrollers and connected via USB-C. Str8-Key bridges a fun engineering project with the great configurability of the QMK firmware, the result of which offers a unique and ergonomically safe typing experience! With 58 keys and infinite possibilities, this keyboard can be used to create layouts tailored perfectly to your workflow (or gameflow). Built entirely from scratch, it remains an affordable project at just around $140, excluding 3D printing costs — actually a pretty good price for a fully customized typing experience.
 
+Wow this is the 225 recitation! there are so many cool people here today.
+
 ## What You'll find in this Github:
 
 You can look in the Tree.txt file to see a full
